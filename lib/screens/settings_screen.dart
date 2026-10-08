@@ -38,7 +38,7 @@ class SettingsScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.03),
+                    color: Colors.black.withValues(alpha: 0.03),
                     blurRadius: 10,
                   ),
                 ],
@@ -83,7 +83,7 @@ class SettingsScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.03),
+                    color: Colors.black.withValues(alpha: 0.03),
                     blurRadius: 10,
                   ),
                 ],
@@ -135,7 +135,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                     trailing: Switch(
                       value: settings.isDarkMode,
-                      activeColor: const Color(0xFF0D6EFD),
+                      activeThumbColor: const Color(0xFF0D6EFD),
                       onChanged: (value) {
                         settings.toggleTheme();
                       },
@@ -157,7 +157,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                     trailing: Switch(
                       value: settings.language == 'ar',
-                      activeColor: const Color(0xFF0D6EFD),
+                      activeThumbColor: const Color(0xFF0D6EFD),
                       onChanged: (value) {
                         settings.changeLanguage(value ? 'ar' : 'en');
                       },

@@ -131,7 +131,7 @@ class DashboardScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: 0.05),
                       blurRadius: 10,
                     ),
                   ],
@@ -242,7 +242,7 @@ class DashboardScreen extends StatelessWidget {
                                 show: true,
                                 color: const Color(
                                   0xFF0D6EFD,
-                                ).withOpacity(0.15),
+                                ).withValues(alpha: 0.15),
                               ),
                             ),
                           ],
@@ -268,7 +268,7 @@ class DashboardScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
+                            color: Colors.black.withValues(alpha: 0.05),
                             blurRadius: 10,
                           ),
                         ],
@@ -363,7 +363,7 @@ class DashboardScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
+                            color: Colors.black.withValues(alpha: 0.05),
                             blurRadius: 10,
                           ),
                         ],
@@ -585,7 +585,7 @@ class DashboardScreen extends StatelessWidget {
                     textColor,
                     subTextColor,
                   );
-                }).toList(),
+                }),
 
               const SizedBox(height: 80),
             ],
@@ -639,11 +639,16 @@ class DashboardScreen extends StatelessWidget {
         color: cardColor,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: isEarned ? activeColor.withOpacity(0.5) : Colors.transparent,
+          color: isEarned
+              ? activeColor.withValues(alpha: 0.5)
+              : Colors.transparent,
           width: 2,
         ),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+          ),
         ],
       ),
       child: Column(
@@ -654,12 +659,14 @@ class DashboardScreen extends StatelessWidget {
               CircleAvatar(
                 radius: 25,
                 backgroundColor: isEarned
-                    ? activeColor.withOpacity(0.2)
-                    : Colors.grey.withOpacity(0.1),
+                    ? activeColor.withValues(alpha: 0.2)
+                    : Colors.grey.withValues(alpha: 0.1),
                 child: Icon(
                   icon,
                   size: 30,
-                  color: isEarned ? activeColor : Colors.grey.withOpacity(0.4),
+                  color: isEarned
+                      ? activeColor
+                      : Colors.grey.withValues(alpha: 0.4),
                 ),
               ),
               if (!isEarned)
@@ -709,7 +716,10 @@ class DashboardScreen extends StatelessWidget {
         color: cardColor,
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+          ),
         ],
       ),
       child: Column(
@@ -747,7 +757,7 @@ class DashboardScreen extends StatelessWidget {
         color: bgColor,
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 8),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.03), blurRadius: 8),
         ],
       ),
       child: Row(
@@ -794,7 +804,7 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
             progressColor: Colors.green,
-            backgroundColor: Colors.grey.withOpacity(0.2),
+            backgroundColor: Colors.grey.withValues(alpha: 0.2),
             circularStrokeCap: CircularStrokeCap.round,
           ),
         ],

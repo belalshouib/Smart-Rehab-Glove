@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'main_layout.dart';
+import 'login_screen.dart'; // تم التعديل هنا لربط شاشة تسجيل الدخول
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -56,7 +56,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // زرار التخطي
                   TextButton(
                     onPressed: () => _controller.jumpToPage(2),
                     child: const Text(
@@ -68,8 +67,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                     ),
                   ),
-
-                  // نقط التقليب
                   SmoothPageIndicator(
                     controller: _controller,
                     count: 3,
@@ -80,8 +77,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       dotWidth: 8,
                     ),
                   ),
-
-                  // زرار التالي أو ابدأ
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF0D6EFD),
@@ -95,10 +90,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                     onPressed: () {
                       if (isLastPage) {
+                        // التعديل هنا: النقل لشاشة تسجيل الدخول بدل الداشبورد
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const MainLayout(),
+                            builder: (context) => const LoginScreen(),
                           ),
                         );
                       } else {
@@ -125,7 +121,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // التعديل السحري هنا: ضفنا SingleChildScrollView عشان نحل مشكلة الـ Overflow
   Widget _buildPage({
     required Color color,
     required IconData icon,

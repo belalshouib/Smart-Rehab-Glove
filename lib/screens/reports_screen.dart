@@ -92,7 +92,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withValues(alpha: 0.05),
                     blurRadius: 10,
                   ),
                 ],
@@ -144,7 +144,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                       size: 30,
                     ),
                     progressColor: Colors.green,
-                    backgroundColor: Colors.grey.withOpacity(0.2),
+                    backgroundColor: Colors.grey.withValues(alpha: 0.2),
                     circularStrokeCap: CircularStrokeCap.round,
                     animation: true,
                     animationDuration: 1000,
@@ -162,7 +162,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withValues(alpha: 0.05),
                     blurRadius: 10,
                   ),
                 ],
@@ -244,7 +244,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                             dotData: const FlDotData(show: true),
                             belowBarData: BarAreaData(
                               show: true,
-                              color: Colors.green.withOpacity(0.1),
+                              color: Colors.green.withValues(alpha: 0.1),
                             ),
                           ),
                         ],
@@ -284,7 +284,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                   textColor,
                   subTextColor,
                 );
-              }).toList(),
+              }),
 
             const SizedBox(height: 30),
           ],
@@ -307,7 +307,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
             border: Border.all(
               color: isActive
                   ? Colors.transparent
-                  : Colors.grey.withOpacity(0.2),
+                  : Colors.grey.withValues(alpha: 0.2),
             ),
           ),
           alignment: Alignment.center,
@@ -337,7 +337,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

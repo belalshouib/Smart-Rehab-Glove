@@ -193,7 +193,7 @@ class _TherapyScreenState extends State<TherapyScreen> {
                       borderRadius: BorderRadius.circular(15),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.05),
+                          color: Colors.black.withValues(alpha: 0.05),
                           blurRadius: 10,
                         ),
                       ],
@@ -303,7 +303,7 @@ class _TherapyScreenState extends State<TherapyScreen> {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.05),
+                          color: Colors.black.withValues(alpha: 0.05),
                           blurRadius: 10,
                         ),
                       ],
@@ -358,7 +358,7 @@ class _TherapyScreenState extends State<TherapyScreen> {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
+                            color: Colors.black.withValues(alpha: 0.05),
                             blurRadius: 10,
                           ),
                         ],
@@ -487,9 +487,12 @@ class _TherapyScreenState extends State<TherapyScreen> {
           width: 35,
           height: maxHeight,
           decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.15),
+            color: Colors.grey.withValues(alpha: 0.15),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.grey.withOpacity(0.3), width: 1),
+            border: Border.all(
+              color: Colors.grey.withValues(alpha: 0.3),
+              width: 1,
+            ),
           ),
           alignment: Alignment.bottomCenter,
           child: AnimatedContainer(
@@ -498,7 +501,7 @@ class _TherapyScreenState extends State<TherapyScreen> {
             height: maxHeight * value,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [activeColor.withOpacity(0.6), activeColor],
+                colors: [activeColor.withValues(alpha: 0.6), activeColor],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
               ),
@@ -541,7 +544,7 @@ class _TherapyScreenState extends State<TherapyScreen> {
             animation: true,
             animateFromLastPercent: true,
             animationDuration: 800,
-            backgroundColor: Colors.grey.withOpacity(0.2),
+            backgroundColor: Colors.grey.withValues(alpha: 0.2),
             progressColor: const Color(0xFF0D6EFD),
             barRadius: const Radius.circular(5),
           ),
@@ -599,7 +602,7 @@ class _TherapyScreenState extends State<TherapyScreen> {
           animation: true,
           animateFromLastPercent: true,
           animationDuration: 800,
-          backgroundColor: Colors.grey.withOpacity(0.2),
+          backgroundColor: Colors.grey.withValues(alpha: 0.2),
           progressColor: Colors.amber[600], // لون برتقالي/ذهبي لتمييز القوة
           barRadius: const Radius.circular(8),
           padding: EdgeInsets.zero,
@@ -623,7 +626,7 @@ class _TherapyScreenState extends State<TherapyScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
           decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(15),
             border: Border.all(color: color, width: 2),
           ),
